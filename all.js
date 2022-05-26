@@ -43,7 +43,7 @@ $(document).ready(function() {
         event.preventDefault();
         $(this).addClass('active').parent().siblings().find('a').removeClass('active');
     });
-
+    //QA
     $('.add').click(function(event){
         event.preventDefault();
         $(this).parent().siblings().find('span').slideUp('listDown').parent().siblings().find('p').removeClass('listUp');
