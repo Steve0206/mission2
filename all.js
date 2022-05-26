@@ -46,12 +46,12 @@ $(document).ready(function() {
 
     $('.add').click(function(event){
         event.preventDefault();
-        $(this).parent().siblings().find('span').slideUp('listDown');
-        $(this).parent().find('span').slideDown('listDown').parent().find('a').toggleClass('switch');
+        $(this).parent().siblings().find('span').slideUp('listDown').parent().siblings().find('p').removeClass('listUp');
+        $(this).parent().find('span').slideDown('listDown').parent().find('a').toggleClass('switch').parent().find('p').addClass('listUp');
     });
     $('.reduce').click(function(event){
         event.preventDefault();
-        $(this).parent().find('span').slideUp('listDown');
+        $(this).parent().find('span').slideUp('listDown').parent().find('p').removeClass('listUp');
         $(this).parent().find('a').toggleClass('switch');
     });
 });

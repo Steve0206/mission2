@@ -1130,6 +1130,7 @@ sub {
 }
 
 .question .list .list-item .listDown {
+  margin-top: 24px;
   display: none;
   font-size: 16px;
   line-height: 32px;
