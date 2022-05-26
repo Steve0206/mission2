@@ -135,8 +135,6 @@ sub{
         left: -242px;
     }
     .topbar{
-        position: absolute;
-        z-index: 30;
         padding: 30px;
         display: flex;
         justify-content: space-between;
@@ -719,11 +717,9 @@ sub{
 
     .topbar {
         padding: 30px;
-        display: flex;
-        justify-content: space-between;
+        position: relative;
 
         h1 {
-                z-index: 100;
             a {
                 width: 220px;
                 height: 36px;
@@ -738,6 +734,10 @@ sub{
         }
 
         .plan {
+            top:20px;
+            right: 20px;
+            position: absolute;
+            z-index: 100;
             width: 128px;
             height: 40px;
             text-align: center;
@@ -750,9 +750,7 @@ sub{
         }
     }
     .text{
-        position: absolute;
         color: #221E1F;
-        z-index: 30;
         h2{
             margin-top: 116px;
             font-size: 48px;
@@ -779,6 +777,10 @@ sub{
                     background-size: 130px 36px;
                 }
             }
+        }
+        .text{
+            position: absolute;
+            z-index: 100;
         }
         .desktop{
             display: none;

@@ -145,8 +145,6 @@ sub {
 }
 
 .header .topbar {
-  position: absolute;
-  z-index: 30;
   padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -809,16 +807,7 @@ sub {
 
 .header2 .topbar {
   padding: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header2 .topbar h1 {
-  z-index: 100;
+  position: relative;
 }
 
 .header2 .topbar h1 a {
@@ -834,6 +823,10 @@ sub {
 }
 
 .header2 .topbar .plan {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: 100;
   width: 128px;
   height: 40px;
   text-align: center;
@@ -846,9 +839,7 @@ sub {
 }
 
 .header2 .text {
-  position: absolute;
   color: #221E1F;
-  z-index: 30;
 }
 
 .header2 .text h2 {
@@ -873,6 +864,10 @@ sub {
   .header2 .topbar h1 a {
     width: 130px;
     background-size: 130px 36px;
+  }
+  .header2 .text {
+    position: absolute;
+    z-index: 100;
   }
   .header2 .desktop {
     display: none;
