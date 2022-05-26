@@ -135,6 +135,8 @@ sub{
         left: -242px;
     }
     .topbar{
+        position: absolute;
+        z-index: 30;
         padding: 30px;
         display: flex;
         justify-content: space-between;
