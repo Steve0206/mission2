@@ -122,7 +122,7 @@ sub {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1088px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
@@ -136,7 +136,7 @@ sub {
   background-repeat: no-repeat;
 }
 
-.header .ball1 {
+.header .darkblueball {
   position: absolute;
   width: 360px;
   height: 360px;
@@ -163,7 +163,7 @@ sub {
   white-space: nowrap;
   background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true);
   background-repeat: no-repeat;
-  background-size: 220px 36px;
+  background-size: contain;
 }
 
 .header .topbar .plan {
@@ -172,10 +172,13 @@ sub {
   text-align: center;
   line-height: 40px;
   display: inline-block;
-  text-decoration: none;
   color: white;
   background: #FF5D50;
   border-radius: 22px;
+}
+
+.header .topbar .plan:hover {
+  color: gray;
 }
 
 .header .header-mid {
@@ -223,7 +226,7 @@ sub {
     height: auto;
     background-image: none;
   }
-  .header .ball1 {
+  .header .darkblueball {
     width: 126px;
     height: 126px;
     top: 740px;
@@ -310,6 +313,10 @@ sub {
   margin-bottom: 100px;
 }
 
+.footer a:hover {
+  color: gray;
+}
+
 .footer p {
   padding: 16px;
   text-align: center;
@@ -329,6 +336,10 @@ sub {
   .footer h2 {
     font-size: 24px;
   }
+}
+
+.content {
+  overflow: hidden;
 }
 
 .platform h3 {
@@ -403,12 +414,9 @@ sub {
   color: #221E1F;
 }
 
-.role .ball2 {
+.role .lightblueball {
   width: 310px;
   height: 310px;
-  background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg);
-  background-repeat: no-repeat;
-  background-size: 310px 310px;
   position: absolute;
   right: -100px;
   bottom: -140px;
@@ -470,6 +478,11 @@ sub {
 }
 
 @media (max-width: 768px) {
+  .role h3 {
+    padding: 0 10px;
+    font-size: 28px;
+    line-height: 40px;
+  }
   .role-items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -477,7 +490,7 @@ sub {
   .role-items .role-item {
     margin-bottom: 24px;
   }
-  .role .ball2 {
+  .role .lightblueball {
     width: 135px;
     height: 135px;
     background-size: 135px 135px;
@@ -529,6 +542,10 @@ sub {
   background: #56C4C5;
   border: 1px solid #56C4C5;
   border-radius: 27px;
+}
+
+.introduction .in-text a:hover {
+  color: gray;
 }
 
 .introduction .in-items {
@@ -590,6 +607,11 @@ sub {
   }
   .introduction .in-text h3 {
     margin-top: 28px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .introduction .in-text p {
+    font-size: 16px;
   }
   .introduction .in-items {
     margin-top: 32px;
@@ -619,7 +641,7 @@ sub {
   display: none;
 }
 
-.evaluation .ball3 {
+.evaluation .smallorangeball {
   width: 150px;
   height: 150px;
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg);
@@ -797,7 +819,7 @@ sub {
   display: none;
 }
 
-.header2 .ball1 {
+.header2 .darkblueball {
   position: absolute;
   width: 360px;
   height: 360px;
@@ -819,7 +841,7 @@ sub {
   white-space: nowrap;
   background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true);
   background-repeat: no-repeat;
-  background-size: 220px 36px;
+  background-size: contain;
 }
 
 .header2 .topbar .plan {
@@ -838,15 +860,20 @@ sub {
   border-radius: 22px;
 }
 
+.header2 .topbar .plan:hover {
+  color: gray;
+}
+
 .header2 .text {
   color: #221E1F;
 }
 
 .header2 .text h2 {
   margin-top: 116px;
+  margin-bottom: 18px;
   font-size: 48px;
   font-weight: bold;
-  line-height: 70px;
+  line-height: 48px;
 }
 
 .header2 .text p {
@@ -859,7 +886,6 @@ sub {
     background: white;
     border-bottom: 2px solid #FFD153;
     padding: 24px 20px 24px 20px;
-    height: 72px;
   }
   .header2 .topbar h1 a {
     width: 130px;
@@ -868,6 +894,9 @@ sub {
   .header2 .text {
     position: absolute;
     z-index: 100;
+  }
+  .header2 .text h2 {
+    margin-top: 48px;
   }
   .header2 .desktop {
     display: none;
@@ -888,7 +917,7 @@ sub {
   position: relative;
 }
 
-.program .ball4 {
+.program .bigorangeball {
   width: 360px;
   height: 360px;
   background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg);
@@ -945,13 +974,14 @@ sub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .program-items .program-item {
   width: 45%;
+  margin: 0 40px;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   -webkit-box-shadow: 0px 2px 10px #00000014;
           box-shadow: 0px 2px 10px #00000014;
@@ -964,7 +994,7 @@ sub {
   font-size: 24px;
   line-height: 35px;
   padding: 10px;
-  border: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
 }
 
 .program-items .program-item > p {
@@ -994,8 +1024,8 @@ sub {
 
 .program-items .program-item .price .price-box {
   text-align: center;
-  padding: 24px;
-  width: 170px;
+  padding: 22px;
+  width: 160px;
   height: 108px;
   background: #F5F5F5 0% 0% no-repeat padding-box;
   border-radius: 12px;
@@ -1047,7 +1077,16 @@ sub {
   margin-top: 12px;
 }
 
+.program-items .program-item a:hover {
+  color: gray;
+}
+
 @media (max-width: 768px) {
+  .program h3 {
+    padding: 0 10px;
+    font-size: 28px;
+    line-height: 40px;
+  }
   .program .menu {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1095,7 +1134,7 @@ sub {
   margin-bottom: 16px;
 }
 
-.question .list .list-item p {
+.question .list .list-item h4 {
   font-size: 18px;
   line-height: 28px;
 }
