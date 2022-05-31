@@ -44,14 +44,14 @@ $(document).ready(function() {
         $(this).addClass('active').parent().siblings().find('a').removeClass('active');
     });
     //QA
-    $('.add').click(function(event){
+    $("body").on("click", ".add", function(event) {
         event.preventDefault();
-        $(this).parent().siblings().find('p').slideUp('listDown').parent().siblings().find('h4').removeClass('listUp');
-        $(this).parent().find('p').slideDown('listDown').parent().find('a').toggleClass('switch').parent().find('h4').addClass('listUp');
+        $(this).parent().siblings().find('p').slideUp('listDown').parent().siblings().find('h4').removeClass('listUp').parent().find('a').removeClass('reduce').addClass('add');
+        $(this).addClass('reduce').removeClass('add').parent().find('p').slideDown('listDown').parent().find('h4').addClass('listUp');
     });
-    $('.reduce').click(function(event){
+    
+    $("body").on("click", ".reduce", function(event){
         event.preventDefault();
-        $(this).parent().find('p').slideUp('listDown').parent().find('h4').removeClass('listUp');
-        $(this).parent().find('a').toggleClass('switch');
+        $(this).addClass('add').removeClass('reduce').parent().find('h4').removeClass('listUp').parent().find('p').slideUp('listDown');
     });
 });
