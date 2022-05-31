@@ -488,6 +488,7 @@ sub {
         flex-wrap: wrap;
   }
   .role-items .role-item {
+    width: 40%;
     margin-bottom: 24px;
   }
   .role .lightblueball {
@@ -496,6 +497,13 @@ sub {
     background-size: 135px 135px;
     right: -47px;
     bottom: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .role .role-items .role-item {
+    width: 80%;
+    margin: 24px auto;
   }
 }
 
@@ -1159,10 +1167,6 @@ sub {
   background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/icon_minus.svg);
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.question .list .list-item .switch {
-  display: none;
 }
 
 .question .list .list-item .listDown {

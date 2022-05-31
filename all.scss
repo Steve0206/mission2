@@ -440,6 +440,7 @@ sub{
         &-items{
             flex-wrap: wrap;
             .role-item{
+                width: 40%;
                 margin-bottom: 24px;
             }
         }
@@ -449,6 +450,16 @@ sub{
             background-size: 135px 135px;
             right: -47px;
             bottom: 0;
+        }
+    }
+}
+@media (max-width:414px) {
+    .role{
+        .role-items{
+            .role-item{
+                width: 80%;
+                margin: 24px auto;
+            }
         }
     }
 }
